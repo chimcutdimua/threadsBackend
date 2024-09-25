@@ -76,9 +76,8 @@ const loginUser = async (req, res) => {
     if (!user || !isPasswordCorrect)
       return res.status(400).json({ error: "Invalid username or password" });
 
-    const token = generateTokenAndSetCookie(user._id, res);
+    generateTokenAndSetCookie(user._id, res);
     res.json({
-      token,
       _id: user._id,
       name: user.name,
       email: user.email,
