@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: "https://threads-clone-blue.vercel.app", // allow all origins
+    origin: "https://threads-clone-blue.vercel.app/", // allow all origins
     credentials: true, // allow cookies
   })
 );
